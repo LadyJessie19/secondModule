@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    border: 1px solid rebeccapurple;
+    width: 40vw;
+    margin: 100px auto;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+}
