@@ -1,12 +1,23 @@
 import './Header.css'
 
 const Header = () => {
-    const randomNumber = Math.random().toFixed(1)
     return(
-    <div className="header">
-            <p>{randomNumber} é maior ou menor que 0.5?</p>
-        <h1>{randomNumber > 0.5 ? "maior que" : "menor que"}</h1>
-    </div>
+        <div className="header">
+
+            <div className="comHeader">
+                <div className="Icon"><img src=".\src\assets\envelope.svg" alt="" /></div>
+                <div>jessie.moura@gmail.com</div> 
+            </div>
+            <div className="comHeader">
+                <div className="Icon"><img src=".\src\assets\link.svg" alt="" /></div>
+                <div><a href="http://github.com/LadyJessie19" target="_blank">https://github.com/LadyJessie19</a></div>
+            </div>
+            <div className="comHeader">
+                <div className="Icon"><img src=".\src\assets\phone.svg" alt="" /></div>
+                <div>(21) 1234-5678</div>
+            </div>
+            <div className="telefone"></div>
+        </div>
     )
 }
 

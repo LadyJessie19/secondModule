@@ -5,10 +5,26 @@
 }
 
 .header{
-    border: 1px solid rebeccapurple;
-    width: 40vw;
-    margin: 100px auto;
-    background-color: blueviolet;
-    position: absolute;
-    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.comHeader{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2vw;
+}
+.Icon{
+    background-color: #3F3BF4;
+    width: 2.5vw;
+    height: 2.5vw;
+    text-align: center;
+    line-height: 3.2vw;
+    border-radius: 5px;
+}
+.Icon>img{
+    width: 1.5vw;
 }
