@@ -10,8 +10,13 @@ const abilities = [
     {ability: 'English',
     level: 'level 4'},
     {ability: 'Git',
-    level: 'level 3'}
+    level: 'level 3'},
+    {ability: 'Python',
+    level: 'level 1'}
+
 ]
+
+const abilitiesViewer = abilities.map((value, index) => <SkillViewer key={index} ability={value.ability} level={value.level}/>)
 
 const Skills = () => {
     return(
@@ -20,9 +25,9 @@ const Skills = () => {
                 <h2>Skills</h2>
             </div>
             <div className="blueBar">&nbsp;</div>
-                <SkillViewer ability={abilities[0].ability} level={abilities[0].level} />
-                <SkillViewer ability={abilities[1].ability} level={abilities[1].level} />
-                <SkillViewer ability={abilities[2].ability} level={abilities[2].level} />
+                <div className="skillsSection">
+                    {abilitiesViewer}
+                </div>
         </div>
     )
 }

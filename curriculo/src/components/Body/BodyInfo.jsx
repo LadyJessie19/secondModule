@@ -1,11 +1,11 @@
 
-const EduInfo = (props) => {
-    const { place, time, details } = props
+const BodyInfo = (props) => {
+    const { title, time, details } = props
 
     return(
     <div className="eduInfo">
         <div className="firstLine">
-            <h3>{place}</h3>
+            <h3>{title}</h3>
             <p>{time}</p>
         </div>
         <div className="secondLine">
@@ -15,4 +15,4 @@ const EduInfo = (props) => {
     )
 }
 
-export default EduInfo
+export default BodyInfo

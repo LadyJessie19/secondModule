@@ -1,10 +1,12 @@
 
 const SkillViewer = (props) => {
-    const { ability, level } = props;
-    <div className="SkillViewer">
+    const { ability, level } = props
+    return(
+    <div className='skillViewer'>
         <span>{ability}</span>
-        <span>{level}</span>
+        <p>{level}</p>
     </div>
+    )
 }
 
 export default SkillViewer

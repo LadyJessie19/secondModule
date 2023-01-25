@@ -1,4 +1,4 @@
-import EduInfo from "./EduInfo"
+import BodyInfo from "./BodyInfo"
 
 const experience = [
     {occupation: 'Graphic Producer',
@@ -17,8 +17,8 @@ const Experience = () => {
             </div>
             <div className="blueBar">&nbsp;</div>
             <div className="textEducation">
-                <EduInfo place={experience[0].occupation} time={experience[0].time} details={experience[0].details}/>
-                <EduInfo place={experience[1].occupation} time={experience[1].time} details={experience[1].details}/>
+                <BodyInfo title={experience[0].occupation} time={experience[0].time} details={experience[0].details}/>
+                <BodyInfo title={experience[1].occupation} time={experience[1].time} details={experience[1].details}/>
             </div>
         </div>
     )

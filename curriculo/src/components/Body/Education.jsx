@@ -1,13 +1,13 @@
-import EduInfo from "./EduInfo"
+import BodyInfo from "./BodyInfo"
 
 const education = [
-    {place: 'Intelectus',
+    {title: 'Intelectus',
     time: '2011-2014',
     details: 'Construindo seus sonhos com nosso ensino'}, 
-    {place: 'Barão de Lucena',
+    {title: 'Barão de Lucena',
     time: '2014-2016',
     details: 'Seu sonhos estão há palavras de distancia'}, 
-    {place: 'Arnia',
+    {title: 'Arnia',
     time: '2022-2023',
     details: 'Ensino de primeira qualidade'}
     
@@ -21,9 +21,9 @@ const Education = () => {
             </div>
             <div className="blueBar">&nbsp;</div>
             <div className="textEducation">
-                <EduInfo place={education[0].place} time={education[0].time} details={education[0].details}/>
-                <EduInfo place={education[1].place} time={education[1].time} details={education[1].details}/>
-                <EduInfo place={education[2].place} time={education[2].time} details={education[2].details}/>
+                <BodyInfo title={education[0].title} time={education[0].time} details={education[0].details}/>
+                <BodyInfo title={education[1].title} time={education[1].time} details={education[1].details}/>
+                <BodyInfo title={education[2].title} time={education[2].time} details={education[2].details}/>
 
             </div>
         </div>

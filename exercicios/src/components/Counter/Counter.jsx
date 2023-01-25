@@ -3,7 +3,6 @@ import React from 'react'
 class Counter extends React.Component{
     state={
         count: 0,
-        name: 'jessica'
     }
     
     counterPlus = () => (

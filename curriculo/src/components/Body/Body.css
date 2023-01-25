@@ -19,7 +19,7 @@
     border-radius: 30px;
 }
 .eduInfo{
-    width: 40vw;
+    width: 45vw;
 }
 .textEducation{
     display: flex;
@@ -31,4 +31,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1vw;
+}
+.skillViewer{
+    display: flex;
+    gap: 10px;
+}
+.skillViewer>span{
+    font-weight: 600;
 }
