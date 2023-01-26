@@ -14,7 +14,7 @@ const MainContent = (props) => {
                 <h4>Diretor: {director}</h4>
             </div>
             <div className="secondLine">
-                <h4>IMDB: {imdb}</h4>
+                <h4>IMDB: {imdb}/10</h4>
                 <h5>{comment}</h5>
             </div>
         </div>
