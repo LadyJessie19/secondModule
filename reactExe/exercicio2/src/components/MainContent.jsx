@@ -1,4 +1,6 @@
+import React from "react"
 import './style.css'
+import Card from "./Card"
 
 const MainContent = (props) => {
     const { img, title, imdb, director, comment} = props
@@ -6,12 +8,12 @@ const MainContent = (props) => {
     return(
     <div className="mainContent">
         <div className="imgMovie">
-            <img src={img} alt="Image Movie" />
+            <Card img={img} />
         </div>
         <div className="contentMovie">
             <div className="firstLine">
                 <h2>{title}</h2>
-                <h4>Diretor: {director}</h4>
+                <h4>Director: {director}</h4>
             </div>
             <div className="secondLine">
                 <h4>IMDB: {imdb}/10</h4>

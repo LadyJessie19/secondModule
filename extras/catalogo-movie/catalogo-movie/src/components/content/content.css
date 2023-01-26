@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    background-color: #6950A1;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.section-title-imdb{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-director-sinopse{
+    display: flex;
+    flex-direction: column;
+}

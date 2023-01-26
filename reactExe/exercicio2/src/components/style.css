@@ -10,7 +10,9 @@
 }
 .title>h1{
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: Play;
+    margin-right: 30px;
 }
 
 .mainContent{
@@ -40,10 +42,11 @@
 }
 .firstLine{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20vw;
     position: relative;
     top: 30px;
+    padding-right: 40px;
 }
 .firstLine>h2{
     font-weight: 600;
@@ -59,25 +62,27 @@
     font-size: 23px;
     font-weight: 300;
 }
+.bodyCatalog{
+    margin: 5%;    
+    display: flex;
+    flex-direction: column;
+}
 .catalogTitle>h1{
     font-size: 48px;
     font-weight: 400;
 }
 .catalogImgs{
     height: 600px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     align-content: center;
-}
-.lineImgs{
-    height: 600px;
-    display: flex;
-    justify-content: space-evenly;
     gap: 10vw;
-    align-content: center;
 }
-.lineImgs>img{
+.imgCard{
     width: 200px;
     height: 200px;
     border-radius: 10%;
