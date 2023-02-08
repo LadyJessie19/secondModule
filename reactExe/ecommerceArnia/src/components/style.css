@@ -1,0 +1,110 @@
+.header{
+    background-color: #6950A1;
+    color: white;
+    width: 100vw;
+    height: 10vw;
+    padding: 0 5rem;
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+}
+
+.titleHeader>h1{
+    font-weight: 400;
+}
+
+.display{
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+.display>h1{
+    font-size: 48px;
+    font-weight: 500;
+}
+.display>h2{
+    font-size: 42px;
+    font-weight: 400;
+    background-color: #6950A1;
+    color: white;
+    padding: 0 20px;
+    height: 62px;
+    border-radius: 20%;
+}
+.gamesSection{
+    margin-top: 0.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    height: 60vh;
+}
+.game{
+    width: 25%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.gameImg{
+    display: flex;
+    justify-content: center;
+}
+.gameInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.gameInfo>button{
+    width: 5rem;
+    height: 3rem;
+    border-radius: 25%;
+    font-size: 15px;
+    padding: 1px;
+}
+.gameInfo>button:active{
+    background-color: #6950A1;
+}
+.gameInfo>p{
+    font-size: 19px;
+    font-weight: 800;
+}
+.buttonFooter{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 3rem;
+}
+.buttonFooter>button{
+    width: 33%;
+    height: 5.5vw;
+    background-color: #6950A1;
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    border-radius: 14px;
+}
+.footer{
+    border:5px solid #6950A1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.6rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.paymentsFooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=checkbox]{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 15%;
+}
+input[type=checkbox]:checked{
+    background-color: #6950A1;
+    appearance: unset;
+}
