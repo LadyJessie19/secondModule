@@ -6,6 +6,8 @@
 }
 body{
   background-color: rgb(228, 148, 164);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
 }
 
 .logo {
@@ -56,7 +58,7 @@ input{
   gap: 5rem;
 }
 .items{
-  width: 200px;
+  width: 300px;
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -78,4 +80,15 @@ input{
 .animals{
   position: absolute;
   bottom: 50px;
+}
+
+.render{
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.title{
+  position: absolute;
+  top: 50px;
+  font-family: 'Courier New', Courier, monospace;
 }

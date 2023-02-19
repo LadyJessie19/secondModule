@@ -6,7 +6,8 @@ class Exe1 extends Component{
     }
 
     state={
-        variable: 'Lolipop'
+        variable: 'Lolipop',
+        input: ''
     }
 
     showSomething(){
@@ -29,7 +30,8 @@ class Exe1 extends Component{
                 <button onClick={() => this.showSomething()}>Next</button>
                 <p><strong>~choose your candy~</strong></p>
                 <p>{variable}</p>
-                <input type="text" />
+                <input placeholder="digita aqui, bobo" type="text" onChange={(e) => this.setState({input: e.target.value})} />
+                <p>{this.state.input}</p>
             </>
         )
     }
