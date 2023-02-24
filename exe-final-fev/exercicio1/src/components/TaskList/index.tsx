@@ -20,7 +20,7 @@ const TaskList = ({ tasks, setTasks }: TaskListProps) => (
           setTasks(
             tasks.filter((_, filteringIndex) => index !== filteringIndex)
           )
-        }
+        } title={task.title} description={task.description}
       />
     ))}
   </TasksContainer>

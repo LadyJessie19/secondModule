@@ -23,20 +23,22 @@ function App() {
    * spread.
    */
 
-  const addNewCard = () => {}
+  const addNewCard = () => {
+    setTasks([...tasks, { title, description }])
+  }
 
   return (
     <div>
       <Form>
         <FormTitle>Novo Card</FormTitle>
         <label htmlFor="card-title">Título</label>
-        <input id="card-title" />
+        <input id="card-title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <label htmlFor="card-description">Descrição</label>
-        <input id="card-description" />
+        <input id="card-description" value={description} onChange={(e) => setDescription(e.target.value)} />
         <button onClick={addNewCard}>Adicionar</button>
       </Form>
 
-      <TaskList setTasks={setTasks} />
+      <TaskList setTasks={setTasks} tasks={tasks}/>
     </div>
   )
 }
