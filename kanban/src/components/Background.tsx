@@ -1,4 +1,4 @@
-import { Columm, CardNew, InputTitle, InputTextarea, CardTask } from "./styles"
+import { Columm, CardNew, InputTitle, InputTextarea, CardTask, Title, EditIcon, Text, ButtonsBottom, NextIcon } from "./styles"
 import addIcon from '../assets/add.svg'
 import editIcon from '../assets/edit.svg'
 import deleteIcon from '../assets/trash.svg'
@@ -23,11 +23,24 @@ const Background = () => {
         <Columm>
             <h2>To Do</h2>
             <CardTask>
-                <h2>Title</h2><img onClick={alert} src={editIcon} alt="" />
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <img onClick={alert} src={deleteIcon} alt="" />
-                <img onClick={alert} src={nextIcon} alt="" />
+                <Title>Title 
+                <EditIcon><img onClick={alert} src={editIcon} alt="" /></EditIcon> </Title>
+                <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+                <ButtonsBottom>
+                    <img onClick={alert} src={deleteIcon} alt="" />
+                    <NextIcon><img onClick={alert} src={nextIcon} alt="" /></NextIcon>
+                </ButtonsBottom>
             </CardTask>
+            <CardTask>
+                <Title>Title 
+                <EditIcon><img onClick={alert} src={editIcon} alt="" /></EditIcon> </Title>
+                <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+                <ButtonsBottom>
+                    <img onClick={alert} src={deleteIcon} alt="" />
+                    <NextIcon><img onClick={alert} src={nextIcon} alt="" /></NextIcon>
+                </ButtonsBottom>
+            </CardTask>
+            
         </Columm>
         <Columm>
             <h2>Doing</h2>

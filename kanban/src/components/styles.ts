@@ -62,8 +62,31 @@ export const CardTask = styled.div`
   padding: 1em;
   background-color: whitesmoke;
   margin-bottom: 1em;
+  position: relative;
 `
 
 export const Title = styled.h3`
+  display: flex;
+  justify-content: space-around;
+  font-size: 21px;
+`
+
+export const Text = styled.p`
+  font-weight:500;
+`
+export const DeleteIcon = styled.span`
+  position: absolute;
+`
+export const NextIcon = styled.span`
+  position: absolute;
+  right: 10px;
+`
+export const PreviousIcon = styled.span`
+
+`
+export const EditIcon = styled.span`
+
+`
+export const ButtonsBottom = styled.div`
 
 `
