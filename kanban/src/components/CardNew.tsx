@@ -1,18 +1,17 @@
-import { CardNew, InputTitle, InputTextarea, ButtonsBottom, NextIcon } from "./styles"
+import { CardNewD, InputTitle, InputTextarea } from "./styles"
 
 import addIcon from '../assets/add.svg'
 
-const CardZap = ({ title, description, columm }) => {
- 
-    const addI = <img onClick={alert} src={addIcon} alt="addIcon" />
+const CardNew = ({ titleState, descriptionState, newTitle, newDescription, addCard }) => {
+    const addI = <img onClick={addCard} src={addIcon} alt="addIcon" />
 
     return(
-        <CardNew>
-                <InputTitle type="text" placeholder="Title" value={title} onChange={(e) => newTitle(e)}/>
-                <InputTextarea placeholder="Description" value={description} onChange={(e) => newDescription(e)}/><br/>
-                <img onClick={alert} src={addIcon} alt="" />
-        </CardNew>
+        <CardNewD>
+                <InputTitle type="text" placeholder="Title" value={titleState} onChange={(e) => newTitle(e)}/>
+                <InputTextarea placeholder="Description" value={descriptionState} onChange={(e) => newDescription(e)}/><br/>
+                {addI}
+        </CardNewD>
     )
 }
 
-export default CardZap
+export default CardNew

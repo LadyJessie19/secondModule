@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { stored } from '../data/stored'
 import { Back } from "./styles"
 import { Columm } from './Columm'
@@ -16,9 +16,14 @@ const Background = () => {
     const [description, setDescription] = useState('')
     const [cards, setCards] = useState(stored)
 
-    const alert = () => {
-        return window.alert('clicou!')
-    }
+    useEffect(() => {
+        console.log('ocorreu uma mudança')
+        console.log(cards)
+    }, [cards])
+
+    const TODO = 'to do'
+    const DOING = 'doing'
+    const DONE = 'done'
 
     const newTitle = (e) => {
         setTitle(e.target.value)
@@ -28,8 +33,14 @@ const Background = () => {
         setDescription(e.target.value)
     }
 
-    const newCard = () => {
-        
+    const addCard = () => {
+        setCards([...cards, {id: (stored.length + 1), title: title, description: description, columm: TODO}]) 
+    }
+    
+    const nextColumm = (id, section) => {
+        const obj = cards.filter((card) => card.id === id)
+        const otherCards = cards.filter((card) => card.id !== id)
+        setCards([otherCards[0], {...obj[0], columm : section}])
     }
 
     const titleColumm = {
@@ -48,10 +59,10 @@ const Background = () => {
 
     return(
         <Back>
-        <Columm title={titleColumm.NEW} cards={cards} section={sectionColumm.NEW}></Columm>
-        <Columm title={titleColumm.TODO} cards={cards} section={sectionColumm.TODO}></Columm>
-        <Columm title={titleColumm.DOING} cards={cards} section={sectionColumm.DOING}></Columm>
-        <Columm title={titleColumm.DONE} cards={cards} section={sectionColumm.DONE}></Columm>
+        <Columm title={titleColumm.NEW} cards={cards} section={sectionColumm.NEW} titleState={title} newTitle={newTitle} descriptionState={description} newDescription={newDescription} addCard={addCard} nextColumm={nextColumm}></Columm>
+        <Columm title={titleColumm.TODO} cards={cards} section={sectionColumm.TODO} nextColumm={nextColumm}></Columm>
+        <Columm title={titleColumm.DOING} cards={cards} section={sectionColumm.DOING} nextColumm={nextColumm}></Columm>
+        <Columm title={titleColumm.DONE} cards={cards} section={sectionColumm.DONE} nextColumm={nextColumm}></Columm>
         </Back>
     )
 }

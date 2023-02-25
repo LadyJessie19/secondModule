@@ -16,7 +16,7 @@ export const ColummS = styled.div`
   min-height: 85vh;
   padding: 15;
 `
-export const CardNew = styled.div`
+export const CardNewD = styled.div`
   border-radius: 35px;
   box-shadow: 2px 3px 5px gray;
   width: 95%;
@@ -72,9 +72,12 @@ export const Title = styled.h3`
 
 export const Text = styled.p`
   font-weight:500;
+  height:55%;
 `
 export const DeleteIcon = styled.span`
   position: absolute;
+  text-align: center;
+  width: 100%;
 `
 export const NextIcon = styled.span`
   position: absolute;
@@ -88,10 +91,11 @@ export const EditIcon = styled.span`
 
 `
 export const ButtonsBottom = styled.div`
+  position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  bottom:0;
 `
 export const CardEdit = styled.div`
   border-radius: 35px;
