@@ -1,67 +1,58 @@
-import { Columm, CardNew, InputTitle, InputTextarea, CardTask, Title, EditIcon, Text, ButtonsBottom, NextIcon } from "./styles"
+import { useState } from "react"
+import { stored } from '../data/stored'
+import { Back } from "./styles"
+import { Columm } from './Columm'
+
 import addIcon from '../assets/add.svg'
 import editIcon from '../assets/edit.svg'
 import deleteIcon from '../assets/trash.svg'
 import nextIcon from '../assets/right.svg'
 import previousIcon from '../assets/left.svg'
+import cancelIcon from '../assets/cancel.svg'
+import saveIcon from '../assets/save.svg'
 
 const Background = () => {
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [cards, setCards] = useState(stored)
+
     const alert = () => {
         return window.alert('clicou!')
     }
+
+    const newTitle = (e) => {
+        setTitle(e.target.value)
+    }
+
+    const newDescription = (e) => {
+        setDescription(e.target.value)
+    }
+
+    const newCard = () => {
+        
+    }
+
+    const titleColumm = {
+        NEW: 'New',
+        TODO: 'To Do',
+        DOING: 'Doing',
+        DONE: 'Done'
+    }
+
+    const sectionColumm = {
+        NEW: 'new',
+        TODO: 'to do',
+        DOING: 'doing',
+        DONE: 'done'
+    }
+
     return(
-        <>
-        <Columm>
-            <h2>New</h2>
-            <CardNew>
-                <InputTitle type="text" placeholder="Title" />
-                <InputTextarea placeholder="Description" name="" id="" cols="30" rows="10"></InputTextarea><br/>
-                <img onClick={alert} src={addIcon} alt="" />
-            </CardNew>
-            
-        </Columm>
-        <Columm>
-            <h2>To Do</h2>
-            <CardTask>
-                <Title>Title 
-                <EditIcon><img onClick={alert} src={editIcon} alt="" /></EditIcon> </Title>
-                <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
-                <ButtonsBottom>
-                    <img onClick={alert} src={deleteIcon} alt="" />
-                    <NextIcon><img onClick={alert} src={nextIcon} alt="" /></NextIcon>
-                </ButtonsBottom>
-            </CardTask>
-            <CardTask>
-                <Title>Title 
-                <EditIcon><img onClick={alert} src={editIcon} alt="" /></EditIcon> </Title>
-                <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
-                <ButtonsBottom>
-                    <img onClick={alert} src={deleteIcon} alt="" />
-                    <NextIcon><img onClick={alert} src={nextIcon} alt="" /></NextIcon>
-                </ButtonsBottom>
-            </CardTask>
-            
-        </Columm>
-        <Columm>
-            <h2>Doing</h2>
-            {/* <Card>
-                <h2>Title</h2><img onClick={alert} src={editIcon} alt="" />
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <img onClick={alert} src={previousIcon} alt="" />
-                <img onClick={alert} src={deleteIcon} alt="" />
-                <img onClick={alert} src={nextIcon} alt="" />
-            </Card> */}
-        </Columm>
-        <Columm>
-            <h2>Done</h2>
-            {/* <Card>
-                <h2>Title</h2><img onClick={alert} src={editIcon} alt="" />
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <img onClick={alert} src={previousIcon} alt="" />
-                <img onClick={alert} src={deleteIcon} alt="" />
-            </Card> */}
-        </Columm>
-        </>
+        <Back>
+        <Columm title={titleColumm.NEW} cards={cards} section={sectionColumm.NEW}></Columm>
+        <Columm title={titleColumm.TODO} cards={cards} section={sectionColumm.TODO}></Columm>
+        <Columm title={titleColumm.DOING} cards={cards} section={sectionColumm.DOING}></Columm>
+        <Columm title={titleColumm.DONE} cards={cards} section={sectionColumm.DONE}></Columm>
+        </Back>
     )
 }
 
