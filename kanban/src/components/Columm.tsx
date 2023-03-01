@@ -7,8 +7,14 @@ export const Columm = ({title, section, nextSection, cards, titleState, newTitle
     
     const nextSectionFake = 'doing'
 
+    const columms = ['do', 'doing', 'done']
+
+    //columms[0] = 'do'
+    //columms[1] = 'doing'
+    //columms[2] = 'done'
+
     const showCard = (card) => {
-        return <CardZap key={card.id} id={card.id} title={card.title} description={card.description} columm={section} nextColumm={nextColumm} nextSection={nextSectionFake}></CardZap>
+        return <CardZap key={card.id} id={card.id} title={card.title} description={card.description} columm={section} nextColumm={nextColumm} nextSection={columms}></CardZap>
     } 
     
     const dontShowCard = ''

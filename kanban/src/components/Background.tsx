@@ -11,6 +11,23 @@ import previousIcon from '../assets/left.svg'
 import cancelIcon from '../assets/cancel.svg'
 import saveIcon from '../assets/save.svg'
 
+/* === TAKE MY NOTES AWAY ===
+YEP! I CAN'T GO ANY FUTHER RIGHT NOW.
+SOOOO, I LEAVE FOR YOU, JESSIE-FROM-THE-FUTURE, TO FINISH THIS EXERCISE.
+
+[X] CREATE A SIMILAR DESIGN TO FIGMA
+[X] ORGANIZE IN COMPS LOGIC
+[X] PUT EACH CARD IN EACH COLUMM
+[X] FUNCTION ADD A NEW CARD
+[ ] MOVE THE CARDS BETWEEN THE COLUMMS <- ->
+[ ] CREATE A CONDITIONAL RENDER TO THE BUTTONSbOTTOM
+[ ] CREATE THE BUTTONS FUNCTIONS (DELETE, EDIT, SAVE AND CANCEL)
+[ ] CREATE A SPECIAL CARD - EDIT FUNCTION
+
+RAMDOM PHRASE : "In the end, all of us will be judged with the courage of our hearts"
+
+*/
+
 const Background = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')

@@ -8,7 +8,7 @@ import previousIcon from '../assets/left.svg'
 import cancelIcon from '../assets/cancel.svg'
 import saveIcon from '../assets/save.svg'
 
-const CardZap = ({ id, title, description, columm, nextColumm, nextSection }) => {
+const CardZap = ({ id, title, description, columm, nextColumm, nextSection, columms }) => {
  
 
     const objIcons = {
@@ -19,6 +19,10 @@ const CardZap = ({ id, title, description, columm, nextColumm, nextSection }) =>
         previousI: <img onClick={alert} src={previousIcon} alt="previousIcon" />,
         cancelI: <img onClick={alert} src={cancelIcon} alt="cancelIcon" />,
         saveI: <img onClick={alert} src={saveIcon} alt="saveIcon" />
+    }
+
+    const nextCol = (id, columm) => {
+        nextColumm(id)
     }
 
     return(
