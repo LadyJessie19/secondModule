@@ -34,8 +34,6 @@ const Background = () => {
     const [cards, setCards] = useState(stored)
 
     useEffect(() => {
-        console.log('ocorreu uma mudança')
-        console.log(cards)
     }, [cards])
 
     const TODO = 'to do'
@@ -51,15 +49,44 @@ const Background = () => {
     }
 
     const addCard = () => {
-        setCards([...cards, {id: (stored.length + 1), title: title, description: description, columm: TODO}]) 
+        setCards([...cards, {id: (stored.length + 1), title: title, description: description, columm: {nome: TODO, position: 0}}]) 
     }
     
-    const nextColumm = (id, section) => {
-        const obj = cards.filter((card) => card.id === id)
+    const nextColumm = (id) => {
+        let obj = cards.find((card) => card.id === id)
+        obj = nextPosition(obj)
         const otherCards = cards.filter((card) => card.id !== id)
-        setCards([otherCards[0], {...obj[0], columm : section}])
+        setCards([...otherCards, obj])
     }
 
+    const nextPosition = (obj) => {
+        if(obj.columm.position === 0){
+            obj.columm.position = 1
+            obj.columm.nome = DOING
+        } else if(obj.columm.position === 1){
+            obj.columm.position = 2
+            obj.columm.nome = DONE
+        }
+        return obj
+    }
+    const previousColumm = (id) => {
+        console.log(id)
+        let obj = cards.find((card) => card.id === id)
+        obj = previousPosition(obj)
+        const otherCards = cards.filter((card) => card.id !== id)
+        setCards([...otherCards, obj])
+    }
+
+    const previousPosition = (obj) => {
+        if(obj.columm.position === 2){
+            obj.columm.position = 1
+            obj.columm.nome = DOING
+        } else if(obj.columm.position === 1){
+            obj.columm.position = 0
+            obj.columm.nome = TODO
+        }
+        return obj
+    }
     const titleColumm = {
         NEW: 'New',
         TODO: 'To Do',
@@ -76,10 +103,10 @@ const Background = () => {
 
     return(
         <Back>
-        <Columm title={titleColumm.NEW} cards={cards} section={sectionColumm.NEW} titleState={title} newTitle={newTitle} descriptionState={description} newDescription={newDescription} addCard={addCard} nextColumm={nextColumm}></Columm>
-        <Columm title={titleColumm.TODO} cards={cards} section={sectionColumm.TODO} nextColumm={nextColumm}></Columm>
-        <Columm title={titleColumm.DOING} cards={cards} section={sectionColumm.DOING} nextColumm={nextColumm}></Columm>
-        <Columm title={titleColumm.DONE} cards={cards} section={sectionColumm.DONE} nextColumm={nextColumm}></Columm>
+        <Columm title={titleColumm.NEW} cards={cards} section={sectionColumm.NEW} titleState={title} newTitle={newTitle} descriptionState={description} newDescription={newDescription} addCard={addCard} nextColumm={nextColumm} previousColumm={previousColumm}></Columm>
+        <Columm title={titleColumm.TODO} cards={cards} section={sectionColumm.TODO} nextColumm={nextColumm} previousColumm={previousColumm}></Columm>
+        <Columm title={titleColumm.DOING} cards={cards} section={sectionColumm.DOING} nextColumm={nextColumm} previousColumm={previousColumm}></Columm>
+        <Columm title={titleColumm.DONE} cards={cards} section={sectionColumm.DONE} nextColumm={nextColumm} previousColumm={previousColumm}></Columm>
         </Back>
     )
 }

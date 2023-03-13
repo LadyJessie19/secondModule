@@ -55,7 +55,7 @@ export const CardTask = styled.div`
   border-radius: 35px;
   box-shadow: 2px 3px 5px gray;
   width: 95%;
-  min-height: 250px;
+  min-height: 300px;
   overflow-y: hidden;
   box-sizing: border-box;
   padding: 1em;
@@ -75,27 +75,21 @@ export const Text = styled.p`
   height:55%;
 `
 export const DeleteIcon = styled.span`
-  position: absolute;
-  text-align: center;
-  width: 100%;
+  margin-bottom: 10px;
 `
 export const NextIcon = styled.span`
-  position: absolute;
-  right: 10px;
+  margin-bottom: 10px;
 `
 export const PreviousIcon = styled.span`
-  position: absolute;
-  left: 10px;
+  margin-bottom: 10px;
 `
 export const EditIcon = styled.span`
 
 `
 export const ButtonsBottom = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  bottom:0;
 `
 export const CardEdit = styled.div`
   border-radius: 35px;

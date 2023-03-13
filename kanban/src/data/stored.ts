@@ -7,18 +7,27 @@ export const stored = [
         id: 1,
         title: 'Tarefa 1',
         description: 'Tarefa da coluna to do',
-        columm: TODO
+        columm: {
+            nome: TODO,
+            position: 0
+        }
     },
     {
         id: 2,
         title: 'Tarefa 2',
         description: 'Tarefa da coluna doing',
-        columm: DOING
+        columm: {
+            nome: DOING,
+            position: 1
+        }
     },
     {
         id: 3,
         title: 'Tarefa 3',
         description: 'Tarefa da coluna done',
-        columm: DONE
+        columm: {
+            nome: DONE,
+            position: 2
+        }
     }
 ]
