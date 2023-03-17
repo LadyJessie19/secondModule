@@ -1,3 +1,5 @@
+import image from '../../public/logoArnia'
+
 type ProductsType = {
     id: number,
     name: string,
